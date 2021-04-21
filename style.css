@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h4,
+p,
+button {
+  font-size: 1.6rem;
+}
+
+/*------Project Styling----------*/
+.questions {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: pink;
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.questions-and-answers {
+  min-height: 80vh;
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(100px, 120px));
+  gap: 1rem;
+  place-items: center;
+}
+
+.item {
+  border-radius: 10px;
+  width: 600px;
+  min-height: auto;
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+}
+
+.item-question {
+  width: 100%;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-btn {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.question-btn:hover {
+  background: pink;
+}
+
+.question-btn:hover .far {
+  color: white;
+}
+
+.far {
+  color: pink;
+}
+
+.item-answer {
+  display: none;
+}
+
+.show-text .item-answer {
+  display: block;
+}
+
+.minus-icon {
+  display: none;
+}
+
+.show-text .minus-icon {
+  display: inline;
+}
+
+.show-text .plus-icon {
+  display: none;
+}
+
+span {
+  pointer-events: none;
+}
